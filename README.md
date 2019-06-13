@@ -32,7 +32,7 @@ sudo chmod -R 777 /var/jenkins_op/GIT
 ## Build container with Jenkins
 ```bash
 docker build -t jenkins_op .
-docker run -d --network=host --rm -v /var/jenkins_op:/var/jenkins_home --name jenkins_op jenkins_op:latest
+docker run -d --network=host -v /var/jenkins_op:/var/jenkins_home jenkins_op:latest
 ```
 
 Jenkins will available on address http://localhost:8080 with configuration jobs and plugins. It doesn't require login.
